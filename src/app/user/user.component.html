@@ -6,10 +6,9 @@
       <span class="wallet-amount">{{ walletAmount | currency }}</span>
     </div>
     <ul class="menu">
-      <li routerLink="/inicio" routerLinkActive="active">
+      <li routerLink="/user/inicio" routerLinkActive="active">
         <i class="fas fa-home"></i> Inicio
       </li>
-      <!-- Agregar otros elementos del menú si es necesario -->
       <li routerLink="/user/messages" routerLinkActive="active">
         <i class="fas fa-envelope"></i> Mensajes
       </li>
@@ -26,12 +25,7 @@
 
     <!-- Contenido Dinámico -->
     <div class="content">
-      <ng-container *ngIf="!viewingMessages">
-        <app-inicio></app-inicio> <!-- Aquí se muestra el contenido de la vista de inicio -->
-      </ng-container>
-      <ng-container *ngIf="viewingMessages">
-        <app-messages></app-messages> <!-- Aquí se muestra el contenido de los mensajes -->
-      </ng-container>
+      <router-outlet></router-outlet> <!-- Aquí se mostrará el contenido basado en la ruta -->
     </div>
   </div>
 </div>

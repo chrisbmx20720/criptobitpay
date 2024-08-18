@@ -9,7 +9,8 @@ import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { InicioComponent } from './inicio/inicio.component'; // Importar NavbarComponent
+import { InicioComponent } from './inicio/inicio.component';
+
 
 @NgModule({
   declarations: [
@@ -20,12 +21,15 @@ import { InicioComponent } from './inicio/inicio.component'; // Importar NavbarC
     UserComponent,
     MessagesComponent,
     NavbarComponent,
-    InicioComponent // Declarar NavbarComponent aquí
+    InicioComponent,
+    // Elimina esta línea si el componente fue eliminado
+    // TradingChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    // Otros módulos necesarios
   ],
   providers: [],
   bootstrap: [AppComponent]

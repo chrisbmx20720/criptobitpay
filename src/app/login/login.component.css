@@ -18,3 +18,16 @@ h2 {
 .btn {
   width: 100%;
 }
+
+.login-form {
+  width: 350px;
+  padding: 2rem 1rem 1rem;
+}
+
+form {
+  padding: 1rem;
+}
+
+.bg-purple,.btn-primary{
+  background-color: #5c60f5;
+}
