@@ -1,0 +1,95 @@
+.user-dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #343a40;
+  padding: 20px;
+  height: 100vh;
+  color: white;
+  transition: width 0.3s ease; /* Transición suave para el ancho */
+}
+
+.sidebar:hover {
+  width: 300px; /* Ancho expandido al pasar el ratón */
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Transiciones suaves para el fondo y el relleno */
+}
+
+.menu li i {
+  margin-right: 10px;
+}
+
+.menu li:hover {
+  background-color: #495057;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.menu li.active {
+  background-color: #007bff; /* Color para el estado activo */
+  color: white;
+  border-radius: 5px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #f8f9fa;
+  transition: margin-left 0.3s ease; /* Transición suave para el margen */
+}
+
+.notification-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.notification-bar i {
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.notification-bar .badge {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 5px 10px;
+  position: relative;
+  top: -10px;
+  right: -2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease; /* Transición suave para la opacidad */
+}
+
+.notification-bar i.clicked + .badge {
+  opacity: 0; /* Desaparecer la insignia cuando se haga clic */
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-dashboard {
+  margin-top: -20px;
+}

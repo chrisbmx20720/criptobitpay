@@ -1,0 +1,36 @@
+<div class="user-dashboard">
+  <!-- Columna Izquierda: Menú de Navegación -->
+  <div class="sidebar">
+    <ul class="menu">
+      <li><i class="fas fa-home"></i> Inicio</li>
+     <!-- <li><i class="fas fa-chart-line"></i> Estadísticas</li>
+      <li><i class="fas fa-box"></i> Productos</li>
+      <li><i class="fas fa-dollar-sign"></i> Mis Ganancias</li>
+      <li><i class="fas fa-history"></i> Mi Actividad</li>
+      <li><i class="fas fa-trophy"></i> Trofeos</li>
+      <li><i class="fas fa-credit-card"></i> Crédito</li>-->
+      <li (click)="showMessages()"><i class="fas fa-envelope"></i> Mensajes</li>
+    </ul>
+  </div>
+
+  <!-- Columna Derecha: Contenido Principal -->
+  <div class="main-content">
+    <!-- Fila: Notificaciones -->
+    <div class="notification-bar" (click)="showMessages(); clearNotifications()">
+      <i class="fas fa-bell"></i> 
+      <span class="badge" *ngIf="notifications > 0">{{ notifications }}</span>
+    </div>
+
+    <!-- Contenido Dinámico -->
+    <div class="content">
+      <ng-container *ngIf="!viewingMessages">
+        <h2>Bienvenido a tu Panel de Usuario</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.</p>
+        <p>Cras placerat ultricies ante, eu varius est viverra nec. Curabitur non sagittis ligula. Donec venenatis vehicula nunc, ac elementum erat.</p>
+      </ng-container>
+      <ng-container *ngIf="viewingMessages">
+        <app-messages></app-messages>
+      </ng-container>
+    </div>
+  </div>
+</div>
