@@ -8,7 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { MessagesComponent } from './messages/messages.component';
-import { NavbarComponent } from './navbar/navbar.component'; // Importar NavbarComponent
+import { NavbarComponent } from './navbar/navbar.component';
+import { InicioComponent } from './inicio/inicio.component'; // Importar NavbarComponent
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { NavbarComponent } from './navbar/navbar.component'; // Importar NavbarC
     AdminComponent,
     UserComponent,
     MessagesComponent,
-    NavbarComponent // Declarar NavbarComponent aquí
+    NavbarComponent,
+    InicioComponent // Declarar NavbarComponent aquí
   ],
   imports: [
     BrowserModule,

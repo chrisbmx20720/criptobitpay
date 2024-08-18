@@ -6,16 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent {
-  notifications: number = 3;
-  viewingMessages: boolean = false;
+  walletAmount: number = 1500; // Ejemplo de monto de dinero en la billetera
+  notifications: number = 5; // Ejemplo de notificaciones
+  viewingMessages: boolean = false; // Estado para saber si se están viendo los mensajes
 
-  // Mostrar la vista de mensajes
-  showMessages(): void {
+  showMessages() {
     this.viewingMessages = true;
   }
 
-  // Limpiar las notificaciones cuando se hace clic en la campanita
-  clearNotifications(): void {
+  clearNotifications() {
     this.notifications = 0;
   }
 }
