@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Client, CLIENTS } from '../clients'; // Importa CLIENTS como ejemplo de datos
-import { User, USERS } from '../users'; // Importa USERS como ejemplo de datos
+import { Client, CLIENTS } from '../../interfaces/clients'; // Importa CLIENTS como ejemplo de datos
+import { User, USERS } from '../../interfaces/users'; // Importa USERS como ejemplo de datos
 
 @Component({
   selector: 'app-admin',
