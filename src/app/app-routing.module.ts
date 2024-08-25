@@ -7,10 +7,12 @@ import { UserComponent } from './components/user/user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { WalletComponent } from './components/wallet/wallet.component';
+import  {IndicesComponent } from './components/indices/indices.component'
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: 'indices', component: IndicesComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent, 
     children: [ 
