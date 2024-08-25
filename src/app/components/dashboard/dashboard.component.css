@@ -42,6 +42,11 @@
     padding: 10px;
   }
   
+  .active {
+    color: red; /* Solo para probar si se activa el estilo */
+  }
+  
+
   .menu li i {
     margin-right: 10px;
    
