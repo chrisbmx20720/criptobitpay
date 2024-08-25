@@ -12,16 +12,14 @@ import{ DashboardComponent } from './components/dashboard/dashboard.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {path:'dashboard', component:DashboardComponent,children: [
+  { path: 'dashboard', component: DashboardComponent, children: [
+    { path: '', redirectTo: 'inicio', pathMatch: 'full' }, // Redirección a 'inicio'
     { path: 'inicio', component: InicioComponent },
     { path: 'messages', component: MessagesComponent },
   ]},
   { path: 'admin', component: AdminComponent },
-  { path: 'user', component: UserComponent, children: [
-    { path: 'inicio', component: InicioComponent },
-    { path: 'messages', component: MessagesComponent },
-  ]},
-  { path: '', redirectTo: '/login', pathMatch: 'full' } // Redirige a /login
+  { path: 'user', component: UserComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' } 
 ];
 
 @NgModule({

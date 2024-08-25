@@ -1,8 +1,10 @@
 .indices-slider {
     display: flex;
-    overflow-x: auto;
+    overflow-x: hidden;
     white-space: nowrap;
-    padding: 10px 5px;
+    padding: 20px 5px;
+    width: 97%;
+
   }
   .indices-container{
     display: flex;
