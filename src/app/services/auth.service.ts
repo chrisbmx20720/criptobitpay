@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user.model'; 
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators'; // Importar el operador map
+import { Observable, throwError } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,13 @@ export class AuthService {
 
   // Método para obtener usuarios
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(this.apiUrl);
+    return this.http.get<{ users: User[] }>(this.apiUrl).pipe(
+      map(response => response.users || []), // Asegurarse de que la respuesta tenga un array 'users'
+      catchError(error => {
+        console.error('Error al obtener el archivo db.json:', error);
+        return throwError(() => new Error('No se pudo cargar el archivo db.json'));
+      })
+    );
   }
 
   // Método para validar las credenciales

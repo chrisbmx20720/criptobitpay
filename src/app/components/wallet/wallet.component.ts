@@ -17,6 +17,7 @@ export class WalletComponent implements OnInit {
 
   ngOnInit(): void {
     const walletId = localStorage.getItem('walletId');
+    
     if (walletId) {
       this.walletService.getWallet(walletId).subscribe(wallet => {
         this.wallet = wallet;
