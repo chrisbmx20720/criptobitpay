@@ -14,7 +14,9 @@ import { UserChartComponent } from './components/user-chart/user-chart.component
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndicesComponent } from './components/indices/indices.component';
 import { WalletComponent } from './components/wallet/wallet.component';
-
+import { AuthService } from './services/auth.service';
+import { WalletService } from './services/wallet.service';
+import { HttpClientModule } from '@angular/common/http';  
 
 @NgModule({
   declarations: [
@@ -34,9 +36,10 @@ import { WalletComponent } from './components/wallet/wallet.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService,WalletService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

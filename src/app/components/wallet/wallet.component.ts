@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Wallet, Coin } from '../../models/wallet.model'; // Asegúrate de importar Coin
+import { WalletService } from '../../services/wallet.service';
 
 @Component({
   selector: 'app-wallet',
@@ -6,31 +8,30 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wallet.component.css']
 })
 export class WalletComponent implements OnInit {
-  currentView: string | null = 'bitcoin';
-
+  wallet!: Wallet;
+  currentView: string = 'bitcoin'; // Usa string aquí
   totalEquity: number = 0;
   availableMargin: number = 0;
 
+  constructor(private walletService: WalletService) {}
+
   ngOnInit(): void {
-    this.setView('bitcoin'); // Inicializa con Bitcoin (BTC)
+    const walletId = localStorage.getItem('walletId');
+    if (walletId) {
+      this.walletService.getWallet(walletId).subscribe(wallet => {
+        this.wallet = wallet;
+        this.setView(this.currentView); // Inicializa con Bitcoin (BTC)
+      });
+    }
   }
 
   setView(view: string): void {
-    this.currentView = view;
-
-    // Actualiza totalEquity y availableMargin según la moneda seleccionada
-    if (view === 'bitcoin') {
-      this.totalEquity = 50000;
-      this.availableMargin = 10000;
-    } else if (view === 'ethereum') {
-      this.totalEquity = 3000;
-      this.availableMargin = 500;
-    } else if (view === 'gold') {
-      this.totalEquity = 1800;
-      this.availableMargin = 300;
-    } else if (view === 'binance') {
-      this.totalEquity = 400;
-      this.availableMargin = 100;
+    const selectedCoin = this.wallet.coins.find(c => c.name.toLowerCase() === view.toLowerCase());
+    
+    if (selectedCoin) {
+      this.currentView = view;
+      this.totalEquity = selectedCoin.totalEquity;
+      this.availableMargin = selectedCoin.availableMargin;
     }
   }
 }

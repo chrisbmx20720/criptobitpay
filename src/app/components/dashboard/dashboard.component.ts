@@ -1,34 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { WalletService } from '../../services/wallet.service';
+import { Wallet } from '../../models/wallet.model';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
-  walletAmount = 1000; // Ejemplo, reemplaza con tu lógica
-  notifications = 5; // Ejemplo, reemplaza con tu lógica
-  stockIndices = [
-    { name: 'S&P 500', value: 4000 },
-    { name: 'DAX', value: 15000 },
-    { name: 'FTSE 100', value: 7300 },
-    { name: 'Nikkei 225', value: 28000 }
-  ]; // Ejemplo, reemplaza con datos reales
+export class DashboardComponent implements OnInit {
+  wallet!: Wallet;
 
-  slideConfig = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 3000
-  };
+  constructor(private walletService: WalletService) {}
 
-  showMessages() {
-    // Lógica para mostrar mensajes
-  }
-
-  clearNotifications() {
-    this.notifications = 0; // Limpia las notificaciones
+  ngOnInit(): void {
+    const walletId = localStorage.getItem('walletId');
+    if (walletId) {
+      this.walletService.getWallet(walletId).subscribe(wallet => {
+        this.wallet = wallet;
+      });
+    } else {
+      console.error('No wallet ID found in localStorage.');
+    }
   }
 }
