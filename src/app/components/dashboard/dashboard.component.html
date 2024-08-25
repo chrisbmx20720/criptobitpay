@@ -1,22 +1,15 @@
 <div class="user-dashboard">
   <!-- Columna Izquierda: Menú de Navegación -->
   <div class="sidebar">
-    <div class="wallet-info">
-      <i class="fas fa-wallet"></i>
-      <span class="wallet-amount">{{ walletAmount | currency }}</span>
-    </div>
     <ul class="menu">
       <li routerLink="/dashboard/inicio" routerLinkActive="active">
         <i class="fas fa-home"></i> Inicio
       </li>
-      <li routerLink="/dashboard/messages" routerLinkActive="active">
-        <i class="fas fa-envelope"></i> Mensajes
+      <li routerLink="/dashboard/wallet" routerLinkActive="active">
+        <i class="fa-solid fa-wallet"></i> Wallet
       </li>
     </ul>
   </div>
-
-  <!-- Este componente parece un slider o indicadores -->
-  <app-indices></app-indices>
   
   <div class="content">
     <router-outlet></router-outlet>

@@ -1,0 +1,28 @@
+<div class="wallet-container">
+  <!-- Columna Izquierda: Menú de Navegación -->
+  <div class="sidebar">
+    <ul class="menu">
+      <li (click)="setView('bitcoin')" [class.active]="currentView === 'bitcoin'">
+        <i class="fab fa-bitcoin"></i> Bitcoin (BTC)
+      </li>
+      <li (click)="setView('ethereum')" [class.active]="currentView === 'ethereum'">
+        <i class="fab fa-ethereum"></i> Ethereum (ETH)
+      </li>
+      <li (click)="setView('gold')" [class.active]="currentView === 'gold'">
+        <i class="fas fa-gem"></i> Gold
+      </li>
+      <li (click)="setView('binance')" [class.active]="currentView === 'binance'">
+        <i class="fab fa-binance"></i> Binance (BNB)
+      </li>
+    </ul>
+  </div>
+
+  <!-- Columna Derecha: Vista Dinámica -->
+  <div class="content">
+    <div *ngIf="currentView">
+      <h2>{{ currentView | titlecase }}</h2>
+      <p><strong>Total Equity:</strong> {{ totalEquity | currency }}</p>
+      <p><strong>Available Margin:</strong> {{ availableMargin | currency }}</p>
+    </div>
+  </div>
+</div>

@@ -8,12 +8,12 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
-import { MessagesComponent } from './components/messages/messages.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { UserChartComponent } from './components/user-chart/user-chart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndicesComponent } from './components/indices/indices.component';
+import { WalletComponent } from './components/wallet/wallet.component';
 
 
 @NgModule({
@@ -23,12 +23,12 @@ import { IndicesComponent } from './components/indices/indices.component';
     RegisterComponent,
     AdminComponent,
     UserComponent,
-    MessagesComponent,
     NavbarComponent,
     InicioComponent,
     UserChartComponent,
     DashboardComponent,
-    IndicesComponent
+    IndicesComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,

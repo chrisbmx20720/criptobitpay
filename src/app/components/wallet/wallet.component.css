@@ -1,0 +1,55 @@
+.wallet-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: transparent;
+    padding: 0px;
+    
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .menu li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .menu li.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .menu li i {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    margin: 0px 20px;
+    background-color: aliceblue;
+    border-radius: 8px;
+  }
+  
+  .content h2 {
+    margin-top: 0;
+  }
+  
+  .content p {
+    font-size: 18px;
+  }
+  

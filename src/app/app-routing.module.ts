@@ -6,7 +6,8 @@ import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InicioComponent } from './components/inicio/inicio.component';
-import { MessagesComponent } from './components/messages/messages.component';
+import { WalletComponent } from './components/wallet/wallet.component';
+
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -14,11 +15,13 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, 
     children: [ 
     { path: 'inicio', component: InicioComponent },
-    { path: 'messages', component: MessagesComponent },
+    { path: 'wallet', component: WalletComponent },
     { path: '', redirectTo: 'inicio', pathMatch: 'full' }
   ]
   },
-  { path: 'admin', component: AdminComponent },
+  { path: 'admin', component: AdminComponent,
+    children: [{ path: 'user', component: UserComponent }]
+   },
   { path: 'user', component: UserComponent },
   { path: '', redirectTo: '/login', pathMatch: 'full' } 
 ];
