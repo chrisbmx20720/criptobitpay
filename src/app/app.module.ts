@@ -12,9 +12,7 @@ import { MessagesComponent } from './components/messages/messages.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { UserChartComponent } from './components/user-chart/user-chart.component';
-import { SwiperModule } from 'ngx-swiper-wrapper';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { Router } from 'express';
 import { IndicesComponent } from './components/indices/indices.component';
 
 
@@ -36,7 +34,6 @@ import { IndicesComponent } from './components/indices/indices.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    SwiperModule,
     RouterModule
   ],
   providers: [],
