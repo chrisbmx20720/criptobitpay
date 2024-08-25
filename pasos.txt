@@ -1,0 +1,4 @@
+un usuario tiene una wallet y una wallet tiene varias monedas.
+
+cada moneda tiene un porcentaje de cambio de subida o bajada 
+
