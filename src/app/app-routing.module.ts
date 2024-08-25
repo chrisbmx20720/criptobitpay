@@ -12,7 +12,7 @@ import{ DashboardComponent } from './components/dashboard/dashboard.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  {path:'client-dashboard', component:DashboardComponent,children: [
+  {path:'dashboard', component:DashboardComponent,children: [
     { path: 'inicio', component: InicioComponent },
     { path: 'messages', component: MessagesComponent },
   ]},

@@ -1,15 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-indices',
   templateUrl: './indices.component.html',
   styleUrls: ['./indices.component.css']
 })
-
-
-export class IndicesComponent {
-
-
+export class IndicesComponent implements OnInit {
 
   indices = [
     { name: 'S&P 500', value: '4,500', change: '+0.5%' },
@@ -24,11 +20,13 @@ export class IndicesComponent {
     { name: 'TSX Composite', value: '21,500', change: '+0.7%' }
   ];
 
-
-  positiveIndices:any = [];
+  positiveIndices: any[] = [];
 
   ngOnInit(): void {
-    // Filtra los índices para mostrar solo los positivos
-    this.positiveIndices = this.indices.filter(index => parseFloat(index.change) > 0);
+    this.positiveIndices = this.getPositiveIndices();
+  }
+
+  getPositiveIndices(): any[] {
+    return this.indices.filter(index => parseFloat(index.change) > 0);
   }
 }
