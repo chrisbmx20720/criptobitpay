@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +13,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { UserChartComponent } from './components/user-chart/user-chart.component';
 import { SwiperModule } from 'ngx-swiper-wrapper';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { Router } from 'express';
+import { IndicesComponent } from './components/indices/indices.component';
+
 
 @NgModule({
   declarations: [
@@ -24,14 +29,15 @@ import { SwiperModule } from 'ngx-swiper-wrapper';
     NavbarComponent,
     InicioComponent,
     UserChartComponent,
-    // Elimina esta línea si el componente fue eliminado
-    // TradingChartComponent
+    DashboardComponent,
+    IndicesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    SwiperModule
+    SwiperModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

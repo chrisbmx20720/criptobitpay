@@ -1,0 +1,49 @@
+.indices-slider {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  .indices-container{
+    display: flex;
+    align-items:center;
+    border:1px dashed salmon;
+  }
+  .indices-container p{
+    height: 22px;
+    margin-bottom: 0px;
+  }
+
+
+  .index-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 0 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    flex: 0 0 auto;
+  }
+  
+  .index-item h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .index-item .value {
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  .index-item .change {
+    font-size: 14px;
+    color: green; /* Cambia a rojo si el cambio es negativo */
+  }
+  
+  .index-item .change-icon {
+    margin-left: 5px;
+  }
+  

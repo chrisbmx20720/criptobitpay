@@ -16,7 +16,7 @@ export class LoginComponent {
     // Aquí validarías las credenciales del usuario
     if (this.username === 'admin' && this.password === '123') {
       // Si las credenciales son válidas, redirigir a /user
-      this.router.navigate(['/user']);
+      this.router.navigate(['/client-dashboard']);
     } else {
       alert('Invalid credentials. Please try again.');
     }

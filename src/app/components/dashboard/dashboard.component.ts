@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-client-dashboard',
-  templateUrl: './client-dashboard.component.html',
-  styleUrls: ['./client-dashboard.component.css']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class ClientDashboardComponent {
+export class DashboardComponent {
   walletAmount = 1000; // Ejemplo, reemplaza con tu lógica
   notifications = 5; // Ejemplo, reemplaza con tu lógica
   stockIndices = [

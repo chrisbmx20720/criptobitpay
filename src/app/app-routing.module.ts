@@ -7,14 +7,19 @@ import { RegisterComponent } from './components/register/register.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { UserComponent } from './components/user/user.component';
 
+import{ DashboardComponent } from './components/dashboard/dashboard.component'
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  {path:'client-dashboard', component:DashboardComponent,children: [
+    { path: 'inicio', component: InicioComponent },
+    { path: 'messages', component: MessagesComponent },
+  ]},
   { path: 'admin', component: AdminComponent },
   { path: 'user', component: UserComponent, children: [
     { path: 'inicio', component: InicioComponent },
     { path: 'messages', component: MessagesComponent },
-    { path: '', redirectTo: 'inicio', pathMatch: 'full' }
   ]},
   { path: '', redirectTo: '/login', pathMatch: 'full' } // Redirige a /login
 ];
