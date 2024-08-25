@@ -10,6 +10,8 @@ import { UserComponent } from './components/user/user.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { UserChartComponent } from './components/user-chart/user-chart.component';
+import { SwiperModule } from 'ngx-swiper-wrapper';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
     MessagesComponent,
     NavbarComponent,
     InicioComponent,
+    UserChartComponent,
     // Elimina esta línea si el componente fue eliminado
     // TradingChartComponent
   ],
@@ -28,7 +31,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    // Otros módulos necesarios
+    SwiperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
