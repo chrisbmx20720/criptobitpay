@@ -8,17 +8,16 @@ import { map, catchError } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = '../../assets/data/db.json';
+  private apiUrl = 'http://localhost:3000/users'; // Cambiado a la URL del endpoint de usuarios
 
   constructor(private http: HttpClient) {}
 
   // Método para obtener usuarios
   getUsers(): Observable<User[]> {
-    return this.http.get<{ users: User[] }>(this.apiUrl).pipe(
-      map(response => response.users || []), // Asegurarse de que la respuesta tenga un array 'users'
+    return this.http.get<User[]>(this.apiUrl).pipe(
       catchError(error => {
-        console.error('Error al obtener el archivo db.json:', error);
-        return throwError(() => new Error('No se pudo cargar el archivo db.json'));
+        console.error('Error al obtener los usuarios:', error);
+        return throwError(() => new Error('No se pudo cargar los usuarios'));
       })
     );
   }

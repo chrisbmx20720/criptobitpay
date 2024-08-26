@@ -16,15 +16,21 @@ export class WalletComponent implements OnInit {
   constructor(private walletService: WalletService) {}
 
   ngOnInit(): void {
-    const walletId = localStorage.getItem('walletId');
+    const walletId = localStorage.getItem('walletId') || 'w001';
     
     if (walletId) {
       this.walletService.getWallet(walletId).subscribe(wallet => {
         this.wallet = wallet;
-        this.setView(this.currentView); // Inicializa con Bitcoin (BTC)
+        this.setView(this.currentView);
       });
     }
+
+    else{
+      console.log("Error con el wallet id");
+      
+    }
   }
+  
 
   setView(view: string): void {
     const selectedCoin = this.wallet.coins.find(c => c.name.toLowerCase() === view.toLowerCase());

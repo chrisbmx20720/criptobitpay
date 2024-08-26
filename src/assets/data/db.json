@@ -1,16 +1,16 @@
 {
   "users": [
     {
-      "userId": "b001",
-      "username": "johndoe",
+      "id": "b001",
+      "username": "admin",
       "lastname": "Doe",
       "name": "John",
       "email": "johndoe@example.com",
-      "password": "password123",
+      "password": "123",
       "walletId": "w001"
     },
     {
-      "userId": "b002",
+      "id": "b002",
       "username": "janedoe",
       "lastname": "Doe",
       "name": "Jane",
@@ -19,7 +19,7 @@
       "walletId": "w002"
     },
     {
-      "userId": "b003",
+      "id": "b003",
       "username": "michaelsmith",
       "lastname": "Smith",
       "name": "Michael",
@@ -28,7 +28,7 @@
       "walletId": "w003"
     },
     {
-      "userId": "b004",
+      "id": "b004",
       "username": "emilyjones",
       "lastname": "Jones",
       "name": "Emily",
@@ -39,38 +39,66 @@
   ],
   "wallets": [
     {
-      "walletId": "w001",
+      "id": "w001",
       "userId": "b001",
       "coins": [
         { 
-          "coinId": "c001", 
+          "id": "c001", 
           "name": "Bitcoin", 
           "amount": 1.5, 
           "totalEquity": 15000, 
           "availableMargin": 7000 
         },
         { 
-          "coinId": "c002", 
+          "id": "c002", 
           "name": "Ethereum", 
           "amount": 5, 
-          "totalEquity": 8000, 
+          "totalEquity": 5000, 
           "availableMargin": 4000 
+        },
+        { 
+          "id": "c003", 
+          "name": "Gold", 
+          "amount": 0, 
+          "totalEquity": 0, 
+          "availableMargin": 0 
+        },
+        { 
+          "id": "c004", 
+          "name": "Binance", 
+          "amount": 0, 
+          "totalEquity": 0, 
+          "availableMargin": 0 
         }
       ]
     },
     {
-      "walletId": "w002",
+      "id": "w002",
       "userId": "b002",
       "coins": [
         { 
-          "coinId": "c001", 
+          "id": "c001", 
           "name": "Bitcoin", 
-          "amount": 2, 
-          "totalEquity": 20000, 
-          "availableMargin": 10000 
+          "amount": 0, 
+          "totalEquity": 0, 
+          "availableMargin": 0 
         },
         { 
-          "coinId": "c004", 
+          "id": "c002", 
+          "name": "Ethereum", 
+          "amount": 0, 
+          "totalEquity": 0, 
+          "availableMargin": 0 
+        },
+        { 
+          "id": "c003", 
+          "name": "Gold", 
+          "amount": 3, 
+          "totalEquity": 3000, 
+          "availableMargin": 1500 
+        },
+        { 
+          "id": "c004", 
           "name": "Binance", 
           "amount": 100, 
           "totalEquity": 5000, 
@@ -79,55 +107,83 @@
       ]
     },
     {
-      "walletId": "w003",
+      "id": "w003",
       "userId": "b003",
       "coins": [
         { 
-          "coinId": "c002", 
-          "name": "Ethereum", 
-          "amount": 20, 
-          "totalEquity": 15000, 
-          "availableMargin": 8000 
-        },
-        { 
-          "coinId": "c003", 
-          "name": "Ripple", 
-          "amount": 2000, 
-          "totalEquity": 7000, 
-          "availableMargin": 3500 
-        }
-      ]
-    },
-    {
-      "walletId": "w004",
-      "userId": "b004",
-      "coins": [
-        { 
-          "coinId": "c001", 
+          "id": "c001", 
           "name": "Bitcoin", 
           "amount": 0.5, 
           "totalEquity": 5000, 
           "availableMargin": 2500 
         },
         { 
-          "coinId": "c004", 
+          "id": "c002", 
+          "name": "Ethereum", 
+          "amount": 10, 
+          "totalEquity": 10000, 
+          "availableMargin": 5000 
+        },
+        { 
+          "id": "c003", 
+          "name": "Gold", 
+          "amount": 0, 
+          "totalEquity": 0, 
+          "availableMargin": 0 
+        },
+        { 
+          "id": "c004", 
           "name": "Binance", 
-          "amount": 150, 
-          "totalEquity": 6000, 
-          "availableMargin": 3000 
+          "amount": 50, 
+          "totalEquity": 2500, 
+          "availableMargin": 1250 
+        }
+      ]
+    },
+    {
+      "id": "w004",
+      "userId": "b004",
+      "coins": [
+        { 
+          "id": "c001", 
+          "name": "Bitcoin", 
+          "amount": 0.75, 
+          "totalEquity": 7500, 
+          "availableMargin": 3750 
+        },
+        { 
+          "id": "c002", 
+          "name": "Ethereum", 
+          "amount": 20, 
+          "totalEquity": 20000, 
+          "availableMargin": 10000 
+        },
+        { 
+          "id": "c003", 
+          "name": "Gold", 
+          "amount": 1000, 
+          "totalEquity": 5000, 
+          "availableMargin": 2500 
+        },
+        { 
+          "id": "c004", 
+          "name": "Binance", 
+          "amount": 0, 
+          "totalEquity": 0, 
+          "availableMargin": 0 
         }
       ]
     }
   ],
   "coins": [
-    { "coinId": "c001", "name": "Bitcoin" },
-    { "coinId": "c002", "name": "Ethereum" },
-    { "coinId": "c003", "name": "Ripple" },
-    { "coinId": "c004", "name": "Binance" }
+    { "id": "c001", "name": "Bitcoin" },
+    { "id": "c002", "name": "Ethereum" },
+    { "id": "c003", "name": "Gold" },
+    { "id": "c004", "name": "Binance" }
   ],
   "transactions": [
     {
-      "transactionId": "t001",
+      "id": "t001",
       "walletId": "w001",
       "coinId": "c001",
       "amount": 0.5,
@@ -135,7 +191,7 @@
       "date": "2024-08-25T10:00:00Z"
     },
     {
-      "transactionId": "t002",
+      "id": "t002",
       "walletId": "w002",
       "coinId": "c004",
       "amount": 50,
@@ -143,7 +199,7 @@
       "date": "2024-08-24T14:30:00Z"
     },
     {
-      "transactionId": "t003",
+      "id": "t003",
       "walletId": "w003",
       "coinId": "c003",
       "amount": 500,
@@ -151,10 +207,10 @@
       "date": "2024-08-23T16:00:00Z"
     },
     {
-      "transactionId": "t004",
+      "id": "t004",
       "walletId": "w004",
-      "coinId": "c001",
-      "amount": 0.3,
+      "coinId": "c002",
+      "amount": 20,
       "type": "deposit",
       "date": "2024-08-22T12:00:00Z"
     }

@@ -1,0 +1,163 @@
+{
+    "users": [
+      {
+        "id": "b001",
+        "username": "admin",
+        "lastname": "Doe",
+        "name": "John",
+        "email": "johndoe@example.com",
+        "password": "123",
+        "walletId": "w001"
+      },
+      {
+        "id": "b002",
+        "username": "janedoe",
+        "lastname": "Doe",
+        "name": "Jane",
+        "email": "janedoe@example.com",
+        "password": "securepass456",
+        "walletId": "w002"
+      },
+      {
+        "id": "b003",
+        "username": "michaelsmith",
+        "lastname": "Smith",
+        "name": "Michael",
+        "email": "michaelsmith@example.com",
+        "password": "mike789",
+        "walletId": "w003"
+      },
+      {
+        "id": "b004",
+        "username": "emilyjones",
+        "lastname": "Jones",
+        "name": "Emily",
+        "email": "emilyjones@example.com",
+        "password": "emilysecure321",
+        "walletId": "w004"
+      }
+    ],
+    "wallets": [
+      {
+        "id": "w001",
+        "userId": "b001",
+        "coins": [
+          { 
+            "id": "c001", 
+            "name": "Bitcoin", 
+            "amount": 1.5, 
+            "totalEquity": 15000, 
+            "availableMargin": 7000 
+          },
+          { 
+            "id": "c002", 
+            "name": "Ethereum", 
+            "amount": 5, 
+            "totalEquity": 5000, 
+            "availableMargin": 4000 
+          }
+        ]
+      },
+      {
+        "id": "w002",
+        "userId": "b002",
+        "coins": [
+          { 
+            "id": "c001", 
+            "name": "Bitcoin", 
+            "amount": 2, 
+            "totalEquity": 20000, 
+            "availableMargin": 10000 
+          },
+          { 
+            "id": "c004", 
+            "name": "Binance", 
+            "amount": 100, 
+            "totalEquity": 5000, 
+            "availableMargin": 2500 
+          }
+        ]
+      },
+      {
+        "id": "w003",
+        "userId": "b003",
+        "coins": [
+          { 
+            "id": "c002", 
+            "name": "Ethereum", 
+            "amount": 20, 
+            "totalEquity": 15000, 
+            "availableMargin": 8000 
+          },
+          { 
+            "id": "c003", 
+            "name": "Ripple", 
+            "amount": 2000, 
+            "totalEquity": 7000, 
+            "availableMargin": 3500 
+          }
+        ]
+      },
+      {
+        "id": "w004",
+        "userId": "b004",
+        "coins": [
+          { 
+            "id": "c001", 
+            "name": "Bitcoin", 
+            "amount": 0.5, 
+            "totalEquity": 5000, 
+            "availableMargin": 2500 
+          },
+          { 
+            "id": "c004", 
+            "name": "Binance", 
+            "amount": 150, 
+            "totalEquity": 6000, 
+            "availableMargin": 3000 
+          }
+        ]
+      }
+    ],
+    "coins": [
+      { "id": "c001", "name": "Bitcoin" },
+      { "id": "c002", "name": "Ethereum" },
+      { "id": "c003", "name": "Ripple" },
+      { "id": "c004", "name": "Binance" }
+    ],
+    "transactions": [
+      {
+        "id": "t001",
+        "walletId": "w001",
+        "coinId": "c001",
+        "amount": 0.5,
+        "type": "deposit",
+        "date": "2024-08-25T10:00:00Z"
+      },
+      {
+        "id": "t002",
+        "walletId": "w002",
+        "coinId": "c004",
+        "amount": 50,
+        "type": "deposit",
+        "date": "2024-08-24T14:30:00Z"
+      },
+      {
+        "id": "t003",
+        "walletId": "w003",
+        "coinId": "c003",
+        "amount": 500,
+        "type": "withdrawal",
+        "date": "2024-08-23T16:00:00Z"
+      },
+      {
+        "id": "t004",
+        "walletId": "w004",
+        "coinId": "c001",
+        "amount": 0.3,
+        "type": "deposit",
+        "date": "2024-08-22T12:00:00Z"
+      }
+    ]
+  }
+  

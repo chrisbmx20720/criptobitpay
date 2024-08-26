@@ -7,6 +7,7 @@ import { AuthService } from '../../services/auth.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent {
   username: string = '';
   password: string = '';
@@ -16,9 +17,11 @@ export class LoginComponent {
   onLogin(): void {
     this.authService.validateUser(this.username, this.password).subscribe(user => {
       if (user) {
-        // Almacenar el ID de la wallet del usuario autenticado para su uso posterior
+        localStorage.clear();
         localStorage.setItem('walletId', user.walletId);
+
         this.router.navigate(['/dashboard']);
+        
       } else {
         alert('Invalid credentials. Please try again.');
       }
