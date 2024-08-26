@@ -1,6 +1,7 @@
 .user-dashboard {
   padding: 20px;
   width: auto;
+  border: 1px solid #ddd;
 }
 
 .card {
