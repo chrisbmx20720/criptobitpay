@@ -20,9 +20,27 @@
   <!-- Columna Derecha: Vista Dinámica -->
   <div class="coins-content">
     <div *ngIf="currentView">
-      <h2>{{ currentView | titlecase }}</h2>
-      <p><strong>Total Equity:</strong> {{ totalEquity | currency }}</p>
-      <p><strong>Available Margin:</strong> {{ availableMargin | currency }}</p>
+      <h3>{{ currentView | titlecase }}</h3>
+     <!-- <p><strong>Total Equity:</strong> {{ totalEquity | currency }}</p>
+      <p><strong>Available Margin:</strong> {{ availableMargin | currency }}</p>-->
+      <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <td><strong>Total Equity:</strong></td>
+            <td>{{ totalEquity | currency }}</td>
+          </tr>
+          <tr>
+            <td><strong>Available Margin:</strong></td>
+            <td>{{ availableMargin | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="d-flex gap-2">
+        <button class="btn btn-success" style="border-radius: 3px;">Deposit</button>
+        <button class="btn btn-danger" style="border-radius: 3px;">Withdraw</button>
+      </div>
+      
     </div>
   </div>
 </div>
