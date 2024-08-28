@@ -10,10 +10,11 @@ import { Wallet } from '../../models/wallet.model';
 export class DashboardComponent implements OnInit {
   wallet!: Wallet;
   currentUser: any;
+  username : any;
 
   constructor(private walletService: WalletService) {}
 
-  ngOnInit(): void {
+  /*ngOnInit(): void {
     const walletId = localStorage.getItem('walletId');
     
     if (walletId) {
@@ -22,6 +23,29 @@ export class DashboardComponent implements OnInit {
       });
     } else {
       console.error('No wallet ID found in localStorage.');
+    }
+  }*/
+
+  ngOnInit(): void {
+    // Recuperar el usuario actual del localStorage
+    const storedUser = localStorage.getItem('currentUser');
+    if (storedUser) {
+      this.currentUser = JSON.parse(storedUser);
+
+      // Destructuring para obtener walletId y name
+      const { walletId, name } = this.currentUser;
+      console.log('Wallet ID:', walletId);
+      console.log('Nombre:', name);
+
+      this.username = name;
+
+
+      this.walletService.getWallet(walletId).subscribe(wallet => {
+        this.wallet = wallet;
+      });
+
+    } else {
+      console.log('No hay usuario en localStorage');
     }
   }
 }
