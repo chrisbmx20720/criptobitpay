@@ -79,7 +79,7 @@
         { 
           "id": "c001", 
           "name": "Bitcoin", 
-          "amount": 0, 
+          "amount": 18000, 
           "totalEquity": 0, 
           "availableMargin": 0 
         },

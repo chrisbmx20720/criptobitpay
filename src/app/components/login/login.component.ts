@@ -18,7 +18,7 @@ export class LoginComponent {
     this.authService.validateUser(this.username, this.password).subscribe(user => {
       if (user) {
         localStorage.clear();
-        localStorage.setItem('walletId', user.walletId);
+        localStorage.setItem('currentUser', JSON.stringify(user));
 
         this.router.navigate(['/dashboard']);
         

@@ -9,6 +9,7 @@ import { Wallet } from '../../models/wallet.model';
 })
 export class DashboardComponent implements OnInit {
   wallet!: Wallet;
+  currentUser: any;
 
   constructor(private walletService: WalletService) {}
 
