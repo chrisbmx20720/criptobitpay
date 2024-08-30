@@ -70,7 +70,7 @@
           "hedgeProtectionInsurance": 2000,
           "optQuantity": 10,
           "strikePrice": 25000,
-          "expirationDate": "2024-12-31T00:00:00Z",
+          "expirationDate": "31-12-2024",
           "earnings": 30000
         },
         {
@@ -81,7 +81,7 @@
           "hedgeProtectionInsurance": 1000,
           "optQuantity": 20,
           "strikePrice": 1500,
-          "expirationDate": "2024-11-30T00:00:00Z",
+          "expirationDate": "30-11-2024",
           "earnings": 15000
         },
         {
@@ -92,7 +92,7 @@
           "hedgeProtectionInsurance": 800,
           "optQuantity": 15,
           "strikePrice": 1800,
-          "expirationDate": "2024-10-31T00:00:00Z",
+          "expirationDate": "31-10-2024",
           "earnings": 10000
         },
         {
@@ -103,7 +103,7 @@
           "hedgeProtectionInsurance": 500,
           "optQuantity": 30,
           "strikePrice": 400,
-          "expirationDate": "2024-09-30T00:00:00Z",
+          "expirationDate": "30-09-2024",
           "earnings": 8000
         }
       ]
@@ -120,7 +120,7 @@
           "hedgeProtectionInsurance": 2500,
           "optQuantity": 12,
           "strikePrice": 26000,
-          "expirationDate": "2024-12-31T00:00:00Z",
+          "expirationDate": "31-12-2024",
           "earnings": 35000
         },
         {
@@ -131,7 +131,7 @@
           "hedgeProtectionInsurance": 1200,
           "optQuantity": 22,
           "strikePrice": 1600,
-          "expirationDate": "2024-11-30T00:00:00Z",
+          "expirationDate": "30-11-2024",
           "earnings": 18000
         },
         {
@@ -142,7 +142,7 @@
           "hedgeProtectionInsurance": 900,
           "optQuantity": 18,
           "strikePrice": 1900,
-          "expirationDate": "2024-10-31T00:00:00Z",
+          "expirationDate": "31-10-2024",
           "earnings": 12000
         },
         {
@@ -153,7 +153,7 @@
           "hedgeProtectionInsurance": 600,
           "optQuantity": 35,
           "strikePrice": 420,
-          "expirationDate": "2024-09-30T00:00:00Z",
+          "expirationDate": "30-09-2024",
           "earnings": 9000
         }
       ]
@@ -170,7 +170,7 @@
           "hedgeProtectionInsurance": 3000,
           "optQuantity": 15,
           "strikePrice": 28000,
-          "expirationDate": "2024-12-31T00:00:00Z",
+          "expirationDate": "31-12-2024",
           "earnings": 40000
         },
         {
@@ -181,7 +181,7 @@
           "hedgeProtectionInsurance": 1500,
           "optQuantity": 25,
           "strikePrice": 1700,
-          "expirationDate": "2024-11-30T00:00:00Z",
+          "expirationDate": "30-11-2024",
           "earnings": 20000
         },
         {
@@ -192,7 +192,7 @@
           "hedgeProtectionInsurance": 1000,
           "optQuantity": 20,
           "strikePrice": 2000,
-          "expirationDate": "2024-10-31T00:00:00Z",
+          "expirationDate": "31-10-2024",
           "earnings": 15000
         },
         {
@@ -203,7 +203,7 @@
           "hedgeProtectionInsurance": 800,
           "optQuantity": 40,
           "strikePrice": 450,
-          "expirationDate": "2024-09-30T00:00:00Z",
+          "expirationDate": "30-09-2024",
           "earnings": 10000
         }
       ]
@@ -220,7 +220,7 @@
           "hedgeProtectionInsurance": 3500,
           "optQuantity": 18,
           "strikePrice": 30000,
-          "expirationDate": "2024-12-31T00:00:00Z",
+          "expirationDate": "31-12-2024",
           "earnings": 45000
         },
         {
@@ -231,7 +231,7 @@
           "hedgeProtectionInsurance": 1800,
           "optQuantity": 30,
           "strikePrice": 1800,
-          "expirationDate": "2024-11-30T00:00:00Z",
+          "expirationDate": "30-11-2024",
           "earnings": 25000
         },
         {
@@ -242,7 +242,7 @@
           "hedgeProtectionInsurance": 1200,
           "optQuantity": 25,
           "strikePrice": 2200,
-          "expirationDate": "2024-10-31T00:00:00Z",
+          "expirationDate": "31-10-2024",
           "earnings": 17000
         },
         {
@@ -253,7 +253,7 @@
           "hedgeProtectionInsurance": 1000,
           "optQuantity": 45,
           "strikePrice": 470,
-          "expirationDate": "2024-09-30T00:00:00Z",
+          "expirationDate": "30-09-2024",
           "earnings": 12000
         }
       ]
@@ -268,7 +268,7 @@
       "hedgeProtectionInsurance": 2000,
       "optQuantity": 10,
       "strikePrice": 25000,
-      "expirationDate": "2024-12-31T00:00:00Z",
+      "expirationDate": "31-12-2024",
       "earnings": 30000
     },
     {
@@ -279,7 +279,7 @@
       "hedgeProtectionInsurance": 1000,
       "optQuantity": 20,
       "strikePrice": 1500,
-      "expirationDate": "2024-11-30T00:00:00Z",
+      "expirationDate": "30-11-2024",
       "earnings": 15000
     },
     {
@@ -290,7 +290,7 @@
       "hedgeProtectionInsurance": 800,
       "optQuantity": 15,
       "strikePrice": 1800,
-      "expirationDate": "2024-10-31T00:00:00Z",
+      "expirationDate": "31-10-2024",
       "earnings": 10000
     },
     {
@@ -301,46 +301,92 @@
       "hedgeProtectionInsurance": 500,
       "optQuantity": 30,
       "strikePrice": 400,
-      "expirationDate": "2024-09-30T00:00:00Z",
+      "expirationDate": "30-09-2024",
       "earnings": 8000
     }
   ],
   "transactions": [
     {
       "id": "t001",
-      "userId": "b001",
-      "amount": 5000,
-      "currency": "USD",
-      "date": "2024-08-01T14:00:00Z",
-      "status": "Completed",
-      "type": "Deposit"
+      "walletId": "w001",
+      "coinId": "c001",
+      "transactionType": "buy",
+      "amount": 2,
+      "transactionDate": "01-01-2024"
     },
     {
       "id": "t002",
-      "userId": "b002",
-      "amount": 10000,
-      "currency": "USD",
-      "date": "2024-08-02T14:00:00Z",
-      "status": "Pending",
-      "type": "Withdrawal"
+      "walletId": "w001",
+      "coinId": "c002",
+      "transactionType": "sell",
+      "amount": 5,
+      "transactionDate": "05-01-2024"
     },
     {
       "id": "t003",
-      "userId": "b003",
-      "amount": 15000,
-      "currency": "EUR",
-      "date": "2024-08-03T14:00:00Z",
-      "status": "Completed",
-      "type": "Deposit"
+      "walletId": "w002",
+      "coinId": "c003",
+      "transactionType": "buy",
+      "amount": 10,
+      "transactionDate": "10-01-2024"
     },
     {
       "id": "t004",
-      "userId": "b004",
-      "amount": 20000,
-      "currency": "GBP",
-      "date": "2024-08-04T14:00:00Z",
-      "status": "Failed",
-      "type": "Deposit"
+      "walletId": "w002",
+      "coinId": "c004",
+      "transactionType": "sell",
+      "amount": 3,
+      "transactionDate": "15-01-2024"
+    },
+    {
+      "id": "t005",
+      "walletId": "w003",
+      "coinId": "c001",
+      "transactionType": "buy",
+      "amount": 1,
+      "transactionDate": "20-01-2024"
+    },
+    {
+      "id": "t006",
+      "walletId": "w003",
+      "coinId": "c002",
+      "transactionType": "sell",
+      "amount": 7,
+      "transactionDate": "25-01-2024"
+    },
+    {
+      "id": "t007",
+      "walletId": "w004",
+      "coinId": "c003",
+      "transactionType": "buy",
+      "amount": 4,
+      "transactionDate": "30-01-2024"
+    },
+    {
+      "id": "t008",
+      "walletId": "w004",
+      "coinId": "c004",
+      "transactionType": "sell",
+      "amount": 6,
+      "transactionDate": "05-02-2024"
+    }
+  ],
+  "accountTypes": [
+    {
+      "id": "a001",
+      "type": "Checking"
+    },
+    {
+      "id": "a002",
+      "type": "Savings"
+    },
+    {
+      "id": "a003",
+      "type": "Business"
+    },
+    {
+      "id": "a004",
+      "type": "Joint"
     }
   ]
 }
