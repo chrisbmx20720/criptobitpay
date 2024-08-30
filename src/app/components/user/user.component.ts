@@ -20,6 +20,7 @@ export class UserComponent implements OnInit {
   }
 
   viewWallet(walletId: string): void {
-    this.router.navigate(['/wallet', walletId]);
+   alert(`ID de la billetera: ${walletId}`);
+    //this.router.navigate(['/wallet', walletId]);
   }
 }
