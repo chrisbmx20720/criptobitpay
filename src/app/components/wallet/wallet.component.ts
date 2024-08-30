@@ -79,6 +79,7 @@ export class WalletComponent implements OnInit {
   ngOnInit(): void {
     // Recuperar el usuario actual del localStorage
     const storedUser = localStorage.getItem('currentUser');
+
     if (storedUser) {
       this.currentUser = JSON.parse(storedUser);
       console.log('Usuario actual:', this.currentUser);
@@ -104,7 +105,7 @@ export class WalletComponent implements OnInit {
     
     if (selectedCoin) {
       this.currentView = view;
-      this.hedgeFundInvestment = selectedCoin.hedgeFundInvestment;
+      this.hedgeFundInvestment = 0;
       this.bonificat = selectedCoin.bonificat;
       this.hedgeProtectionInsurance = selectedCoin.hedgeProtectionInsurance;
       this.optQuantity = selectedCoin.optQuantity;
