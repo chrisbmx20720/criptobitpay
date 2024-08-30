@@ -11,11 +11,12 @@ export class WalletService {
 
   constructor(private http: HttpClient) {}
 
+  // Método para obtener una billetera específica por ID
   getWallet(walletId: string): Observable<Wallet> {
     return this.http.get<Wallet>(`${this.apiUrl}/${walletId}`);
   }
 
-  // Método adicional para obtener todas las billeteras (si es necesario)
+  // Método adicional para obtener todas las billeteras
   getAllWallets(): Observable<Wallet[]> {
     return this.http.get<Wallet[]>(this.apiUrl);
   }
