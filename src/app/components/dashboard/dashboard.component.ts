@@ -11,10 +11,9 @@ export class DashboardComponent implements OnInit {
   wallet!: Wallet;
   currentUser: any;
   username : any;
-  username : any;
 
   constructor(private walletService: WalletService) {}
-
+/*
   ngOnInit(): void {
     // Recuperar el usuario actual del localStorage
     const storedUser = localStorage.getItem('currentUser');
@@ -35,8 +34,8 @@ export class DashboardComponent implements OnInit {
     } else {
       console.log('No hay usuario en localStorage');
     }
-  }*/
-
+  }
+*/
   ngOnInit(): void {
     // Recuperar el usuario actual del localStorage
     const storedUser = localStorage.getItem('currentUser');
