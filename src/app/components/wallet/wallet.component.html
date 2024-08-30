@@ -21,26 +21,39 @@
   <div class="coins-content">
     <div *ngIf="currentView">
       <h3>{{ currentView | titlecase }}</h3>
-     <!-- <p><strong>Total Equity:</strong> {{ totalEquity | currency }}</p>
-      <p><strong>Available Margin:</strong> {{ availableMargin | currency }}</p>-->
       <table class="table table-borderless">
         <tbody>
           <tr>
-            <td><strong>Total Equity:</strong></td>
-            <td>{{ totalEquity | currency }}</td>
+            <td><strong>Hedge Fund Investment:</strong></td>
+            <td>{{ hedgeFundInvestment | currency }}</td>
           </tr>
           <tr>
-            <td><strong>Available Margin:</strong></td>
-            <td>{{ availableMargin | currency }}</td>
+            <td><strong>Bonificat:</strong></td>
+            <td>{{ bonificat | currency }}</td>
+          </tr>
+          <tr>
+            <td><strong>Hedge Protection Insurance:</strong></td>
+            <td>{{ hedgeProtectionInsurance | currency }}</td>
+          </tr>
+          <tr>
+            <td><strong>Opt Quantity:</strong></td>
+            <td>{{ optQuantity }}</td>
+          </tr>
+          <tr>
+            <td><strong>Strike Price:</strong></td>
+            <td>{{ strikePrice | currency }}</td>
+          </tr>
+          <tr>
+            <td><strong>Expiration Date:</strong></td>
+            <td>{{ expirationDate }}</td>
+          </tr>
+          <tr>
+            <td><strong>Earnings:</strong></td>
+            <td>{{ earnings | currency }}</td>
           </tr>
         </tbody>
       </table>
 
-      <div class="d-flex gap-2">
-        <button class="btn btn-success" style="border-radius: 3px;">Deposit</button>
-        <button class="btn btn-danger" style="border-radius: 3px;">Withdraw</button>
-      </div>
-      
     </div>
   </div>
 </div>

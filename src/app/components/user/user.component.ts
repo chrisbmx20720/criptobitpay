@@ -1,20 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from '../../models/user.model';
+import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent {
-  walletAmount: number = 2000; // Ejemplo de monto de dinero en la billetera
-  notifications: number = 5; // Ejemplo de notificaciones
-  viewingMessages: boolean = false; // Estado para saber si se están viendo los mensajes
+export class UserComponent implements OnInit {
+  users: User[] = [];
 
-  showMessages() {
-    this.viewingMessages = true;
+  constructor(private userService: UserService, private router: Router) {}
+
+  ngOnInit(): void {
+    this.userService.getUsers().subscribe(users => {
+      this.users = users;
+    });
   }
 
-  clearNotifications() {
-    this.notifications = 0;
+  viewWallet(walletId: string): void {
+   alert(`ID de la billetera: ${walletId}`);
+    //this.router.navigate(['/wallet', walletId]);
   }
 }
