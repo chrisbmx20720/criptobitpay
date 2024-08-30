@@ -52,6 +52,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, 
     children: [ 
       { path: 'inicio', component: InicioComponent },
+      {path:'wallet', component :WalletComponent},
       { path: 'wallet/:walletId', component: WalletComponent }, // Actualizado para incluir walletId
       { path: '', redirectTo: 'inicio', pathMatch: 'full' }
     ]
