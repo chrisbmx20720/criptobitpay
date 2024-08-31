@@ -1,6 +1,12 @@
 <!-- indices.component.html -->
-<div class="indices-slider">
-    <div *ngFor="let index of indices" class="index-item">
+
+
+
+
+
+<div class="swiper">
+  <div class="indices-slider swiper-wrapper">
+    <div *ngFor="let index of indices" class="index-item swiper-slide">
       <h4>{{ index.name }}</h4>
       <div class="indices-container">
     <p class="value">{{ index.value }}</p>
@@ -12,4 +18,6 @@
       
     </div>
   </div>
+</div>
   
+
