@@ -1,14 +1,42 @@
 <div class="wallet-container">
   <div class="row">
     <div class="user-info">
-      <p><strong>MARIA CARMEN BUENO ROBLES</strong></p>
-      <p>ID: PAF157433</p>
-      <p>ISLAS BALEARES, ESPAÑA.</p>
-      <p>Junior Account: 5645323498ES</p>
-      <p>Introduced by: Rempired Lited</p>
-      <p>Fecha de ingreso: 15-01-2018</p>
-      <p>Fecha de corte: 15-04-2018</p>
-      <p>Próximo corte: 15-05-2018</p>
+      <table class="table table-bordered table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Location</th>
+            <th>Junior Account</th>
+            <th>Introduced by</th>
+            <th>Fecha de ingreso</th>
+            <th>Fecha de corte</th>
+            <th>Próximo corte</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ userId | titlecase }}</td>
+            <td>{{ username | titlecase }}</td>
+           
+            <td>{{ userLocation | titlecase }}</td>
+            <td>{{ accountNumber | titlecase }}</td>
+            <td>Rempired Lited</td>
+            <td>
+              <input type="date" value="2018-01-15" disabled class="form-control-plaintext" />
+            </td>
+            <td>
+              <input type="date" value="2018-04-15" disabled class="form-control-plaintext" />
+            </td>
+            <td>
+              <input type="date" value="2018-01-15" disabled class="form-control-plaintext" />
+            </td>
+            
+          </tr>
+        
+        </tbody>
+      </table>
     </div>
   </div>
 

@@ -19,6 +19,12 @@ export class WalletComponent implements OnInit {
   expirationDate: string = '';
   earnings: number = 0;
   currentUser: any;
+  username : any;
+  accountNumber:any;
+  userLocation:any;
+  userId:any;
+
+  
 
   constructor(private walletService: WalletService) {}
 
@@ -31,10 +37,15 @@ export class WalletComponent implements OnInit {
       console.log('Usuario actual:', this.currentUser);
 
       // Destructuring para obtener walletId y name
-      const { walletId, name } = this.currentUser;
+      const { walletId, name,lastname,country,province, accountTypeId,accountNumber,id } = this.currentUser;
       console.log('Wallet ID:', walletId);
       console.log('Nombre:', name);
 
+      this.username = `${name}  ${lastname}`;
+      this.accountNumber = accountNumber
+      this.userLocation = `${province} , ${country}`;
+      this.userId = id;
+    
 
       this.walletService.getWallet(walletId).subscribe(wallet => {
         this.wallet = wallet;
@@ -61,3 +72,4 @@ export class WalletComponent implements OnInit {
     }
   }
 }
+
