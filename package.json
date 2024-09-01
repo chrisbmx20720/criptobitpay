@@ -29,6 +29,7 @@
     "mongodb": "^6.8.0",
     "mongoose": "^8.5.3",
     "rxjs": "~7.8.0",
+    "swiper": "^11.1.11",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
