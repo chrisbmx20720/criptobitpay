@@ -7,8 +7,7 @@ import { UserComponent } from './components/user/user.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { WalletComponent } from './components/wallet/wallet.component';
-import  {IndicesComponent } from './components/indices/indices.component'
-
+import { IndicesComponent } from './components/indices/indices.component'
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -16,15 +15,20 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'dashboard', component: DashboardComponent, 
     children: [ 
-    { path: 'inicio', component: InicioComponent },
-    { path: 'wallet', component: WalletComponent },
-    { path: '', redirectTo: 'inicio', pathMatch: 'full' }
-  ]
+      { path: 'home', component: InicioComponent },
+      {path:'wallet', component :WalletComponent},
+      { path: 'wallet/:walletId', component: WalletComponent }, // Actualizado para incluir walletId
+      { path: '', redirectTo: 'home', pathMatch: 'full' }
+    ]
   },
   { path: 'admin', component: AdminComponent,
-    children: [{ path: 'user', component: UserComponent }]
-   },
+    children: [
+      { path: 'user', component: UserComponent },
+      { path: 'users', component: UserComponent } // Agregado para UsersComponent en Admin
+    ]
+  },
   { path: 'user', component: UserComponent },
+  { path: 'users', component: UserComponent }, // Agregado para mostrar la lista de usuarios
   { path: '', redirectTo: '/login', pathMatch: 'full' } 
 ];
 

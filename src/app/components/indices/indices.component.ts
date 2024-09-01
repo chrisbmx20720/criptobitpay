@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-indices',
@@ -24,9 +25,25 @@ export class IndicesComponent implements OnInit {
 
   ngOnInit(): void {
     this.positiveIndices = this.getPositiveIndices();
+   // this.initializeSwiper();
   }
 
   getPositiveIndices(): any[] {
     return this.indices.filter(index => parseFloat(index.change) > 0);
+  }
+
+  initializeSwiper(): void {
+    const swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
   }
 }

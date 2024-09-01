@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
   username: string = '';
   password: string = '';
-
+  currentUser :any;
   constructor(private router: Router, private authService: AuthService) {}
 
   onLogin(): void {
@@ -19,6 +19,9 @@ export class LoginComponent {
       if (user) {
         localStorage.clear();
         localStorage.setItem('currentUser', JSON.stringify(user));
+        this.currentUser = user;
+
+        alert(`Welcome back, ${this.currentUser.name}`);
 
         this.router.navigate(['/dashboard']);
         

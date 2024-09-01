@@ -26,7 +26,7 @@ export class AuthService {
   validateUser(username: string, password: string): Observable<User | undefined> {
     return this.getUsers().pipe(
       map((users: User[]) => 
-        users.find(user => user.username === username && user.password === password)
+        users.find(user => (user.username === username || user.email == username)  && user.password === password)
       )
     );
   }

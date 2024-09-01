@@ -10,9 +10,14 @@ import { WalletService } from '../../services/wallet.service';
 })
 export class WalletComponent implements OnInit {
   wallet!: Wallet;
-  currentView: string = 'bitcoin';
-  totalEquity: number = 0;
-  availableMargin: number = 0;
+  currentView: string = 'bitcoin'; // Puedes cambiar este valor por la moneda que desees mostrar por defecto.
+  hedgeFundInvestment: number = 0;
+  bonificat: number = 0;
+  hedgeProtectionInsurance: number = 0;
+  optQuantity: number = 0;
+  strikePrice: number = 0;
+  expirationDate: string = '';
+  earnings: number = 0;
   currentUser: any;
 
   constructor(private walletService: WalletService) {}
@@ -20,6 +25,7 @@ export class WalletComponent implements OnInit {
   ngOnInit(): void {
     // Recuperar el usuario actual del localStorage
     const storedUser = localStorage.getItem('currentUser');
+
     if (storedUser) {
       this.currentUser = JSON.parse(storedUser);
       console.log('Usuario actual:', this.currentUser);
@@ -45,8 +51,13 @@ export class WalletComponent implements OnInit {
     
     if (selectedCoin) {
       this.currentView = view;
-      this.totalEquity = selectedCoin.totalEquity;
-      this.availableMargin = selectedCoin.availableMargin;
+      this.hedgeFundInvestment = 0;
+      this.bonificat = selectedCoin.bonificat;
+      this.hedgeProtectionInsurance = selectedCoin.hedgeProtectionInsurance;
+      this.optQuantity = selectedCoin.optQuantity;
+      this.strikePrice = selectedCoin.strikePrice;
+      this.expirationDate = selectedCoin.expirationDate;
+      this.earnings = selectedCoin.earnings;
     }
   }
 }
