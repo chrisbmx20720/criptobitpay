@@ -60,7 +60,7 @@
           "id": "c003", 
           "name": "Gold", 
           "amount": 0, 
-          "totalEquity": 0, 
+          "totalEquity": 10000, 
           "availableMargin": 0 
         },
         { 
@@ -80,7 +80,7 @@
           "id": "c001", 
           "name": "Bitcoin", 
           "amount": 18000, 
-          "totalEquity": 0, 
+          "totalEquity": 12000, 
           "availableMargin": 0 
         },
         { 
