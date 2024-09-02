@@ -5,7 +5,8 @@
 }
 
 .bg-purple,.btn-primary{
-    background-color:#090979;
+    background-color:transparent;
+    border-bottom: 1px solid #5353a1;
 }
 
 .bg-grey{

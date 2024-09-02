@@ -18,3 +18,23 @@
   background-color: #23272b;
   border-color: #1d2124;
 }
+
+label{
+  color:#ffffff;
+  text-align: left;
+  margin:0px;
+  border:1px dashed salmon;
+}
+
+form{
+  width: 40%;
+}
+
+.row{
+  margin-bottom:10px;
+}
+
+.form-group{
+  display: flex;
+  justify-content: flex-start;
+}
