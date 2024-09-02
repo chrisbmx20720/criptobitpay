@@ -1,4 +1,26 @@
 {
+  "accountTypes": [
+    {
+      "id": "a001",
+      "name": "Vip",
+      "description": "Exclusive account with premium benefits and personalized service."
+    },
+    {
+      "id": "a002",
+      "name": "Junior",
+      "description": "Entry-level account for new investors with basic features."
+    },
+    {
+      "id": "a003",
+      "name": "Senior",
+      "description": "Account for experienced investors with advanced tools and services."
+    },
+    {
+      "id": "a004",
+      "name": "Corporate",
+      "description": "Business-focused account offering extensive resources for corporate clients."
+    }
+  ],
   "users": [
     {
       "id": "b001",
@@ -57,382 +79,18 @@
       "accountNumber": "4567890123"
     },
     {
-      "id": "b00181",
-      "username": "christian",
+      "id": "b00520",
+      "username": "cbmx",
       "lastname": "Alvarez",
       "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w001",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a001",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00445",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w005",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a005",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00584",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w004",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a004",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00677",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w007",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a007",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00692",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w002",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a002",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00643",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w003",
+      "email": "c@gmail.com",
+      "password": "252525",
+      "walletId": "w000",
       "country": "Costa Rica",
       "province": "Puntarenas",
       "phone": "71010101",
       "accountTypeId": "a003",
       "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00294",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w004",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a004",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00580",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w000",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a000",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00525",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "chris@criptobay.com",
-      "password": "010101",
-      "walletId": "w005",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a005",
-      "accountNumber": "52362849861896262"
-    },
-    {
-      "id": "b00835",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w005",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a005",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00323",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w003",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a003",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00389",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w009",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a009",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00213",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w003",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a003",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00055",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w005",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a005",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00349",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w009",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a009",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00985",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w005",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a005",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00397",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w007",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a007",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00868",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w008",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a008",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00347",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w007",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a007",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00371",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w001",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a001",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00279",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w009",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a009",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00546",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w006",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a006",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00910",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w000",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a000",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00992",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w002",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a002",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00331",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w001",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a001",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00120",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w000",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a000",
-      "accountNumber": "6269599"
-    },
-    {
-      "id": "b00997",
-      "username": "christian",
-      "lastname": "Alvarez",
-      "name": "Christian",
-      "email": "c@gmail.com",
-      "password": "010101",
-      "walletId": "w007",
-      "country": "Costa Rica",
-      "province": "Puntarenas",
-      "phone": "71010101",
-      "accountTypeId": "a007",
-      "accountNumber": "6269599"
     }
   ],
   "wallets": [
@@ -599,14 +257,14 @@
           "optQuantity": 18,
           "strikePrice": 30000,
           "expirationDate": "2024-12-31T00:00:00Z",
-          "earnings": 45000
+          "earnings": 50000
         },
         {
           "id": "c002",
           "name": "Ethereum",
           "hedgeFundInvestment": 70000,
           "bonificat": 3500,
-          "hedgeProtectionInsurance": 1800,
+          "hedgeProtectionInsurance": 2000,
           "optQuantity": 30,
           "strikePrice": 1800,
           "expirationDate": "2024-11-30T00:00:00Z",
@@ -619,20 +277,70 @@
           "bonificat": 2500,
           "hedgeProtectionInsurance": 1200,
           "optQuantity": 25,
-          "strikePrice": 2200,
+          "strikePrice": 2100,
           "expirationDate": "2024-10-31T00:00:00Z",
-          "earnings": 17000
+          "earnings": 20000
         },
         {
           "id": "c004",
           "name": "Binance",
           "hedgeFundInvestment": 35000,
           "bonificat": 1800,
-          "hedgeProtectionInsurance": 1000,
-          "optQuantity": 45,
-          "strikePrice": 470,
+          "hedgeProtectionInsurance": 900,
+          "optQuantity": 50,
+          "strikePrice": 480,
           "expirationDate": "2024-09-30T00:00:00Z",
           "earnings": 12000
+        }
+      ]
+    },
+    {
+      "id": "w007",
+      "userId": "b00997",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 20000,
+          "bonificat": 1000,
+          "hedgeProtectionInsurance": 400,
+          "optQuantity": 2,
+          "strikePrice": 22000,
+          "expirationDate": "2024-12-31T00:00:00Z",
+          "earnings": 6000
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 10000,
+          "bonificat": 500,
+          "hedgeProtectionInsurance": 200,
+          "optQuantity": 5,
+          "strikePrice": 1300,
+          "expirationDate": "2024-11-30T00:00:00Z",
+          "earnings": 4000
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 8000,
+          "bonificat": 400,
+          "hedgeProtectionInsurance": 150,
+          "optQuantity": 3,
+          "strikePrice": 1700,
+          "expirationDate": "2024-10-31T00:00:00Z",
+          "earnings": 3000
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 5000,
+          "bonificat": 250,
+          "hedgeProtectionInsurance": 100,
+          "optQuantity": 7,
+          "strikePrice": 350,
+          "expirationDate": "2024-09-30T00:00:00Z",
+          "earnings": 2000
         }
       ]
     }
@@ -641,84 +349,76 @@
     {
       "id": "c001",
       "name": "Bitcoin",
-      "hedgeFundInvestment": 100000,
-      "bonificat": 5000,
-      "hedgeProtectionInsurance": 2000,
-      "optQuantity": 10,
-      "strikePrice": 25000,
-      "expirationDate": "2024-12-31T00:00:00Z",
-      "earnings": 30000
+      "symbol": "BTC",
+      "price": 27000,
+      "marketCap": 500000000,
+      "volume": 20000000
     },
     {
       "id": "c002",
       "name": "Ethereum",
-      "hedgeFundInvestment": 50000,
-      "bonificat": 2500,
-      "hedgeProtectionInsurance": 1000,
-      "optQuantity": 20,
-      "strikePrice": 1500,
-      "expirationDate": "2024-11-30T00:00:00Z",
-      "earnings": 15000
+      "symbol": "ETH",
+      "price": 1700,
+      "marketCap": 300000000,
+      "volume": 15000000
     },
     {
       "id": "c003",
       "name": "Gold",
-      "hedgeFundInvestment": 30000,
-      "bonificat": 1500,
-      "hedgeProtectionInsurance": 800,
-      "optQuantity": 15,
-      "strikePrice": 1800,
-      "expirationDate": "2024-10-31T00:00:00Z",
-      "earnings": 10000
+      "symbol": "XAU",
+      "price": 1900,
+      "marketCap": 100000000,
+      "volume": 5000000
     },
     {
       "id": "c004",
       "name": "Binance",
-      "hedgeFundInvestment": 20000,
-      "bonificat": 1000,
-      "hedgeProtectionInsurance": 500,
-      "optQuantity": 30,
-      "strikePrice": 400,
-      "expirationDate": "2024-09-30T00:00:00Z",
-      "earnings": 8000
+      "symbol": "BNB",
+      "price": 350,
+      "marketCap": 80000000,
+      "volume": 3000000
     }
   ],
   "transactions": [
     {
       "id": "t001",
-      "userId": "b001",
+      "walletId": "w001",
+      "coinId": "c001",
       "amount": 5000,
-      "currency": "USD",
-      "date": "2024-08-01T14:00:00Z",
-      "status": "Completed",
-      "type": "Deposit"
+      "date": "2024-09-01T12:00:00Z",
+      "type": "buy"
     },
     {
       "id": "t002",
-      "userId": "b002",
-      "amount": 10000,
-      "currency": "USD",
-      "date": "2024-08-02T14:00:00Z",
-      "status": "Pending",
-      "type": "Withdrawal"
+      "walletId": "w002",
+      "coinId": "c002",
+      "amount": 1000,
+      "date": "2024-09-01T13:00:00Z",
+      "type": "sell"
     },
     {
       "id": "t003",
-      "userId": "b003",
-      "amount": 15000,
-      "currency": "EUR",
-      "date": "2024-08-03T14:00:00Z",
-      "status": "Completed",
-      "type": "Deposit"
+      "walletId": "w003",
+      "coinId": "c003",
+      "amount": 1500,
+      "date": "2024-09-01T14:00:00Z",
+      "type": "buy"
     },
     {
       "id": "t004",
-      "userId": "b004",
-      "amount": 20000,
-      "currency": "GBP",
-      "date": "2024-08-04T14:00:00Z",
-      "status": "Failed",
-      "type": "Deposit"
+      "walletId": "w004",
+      "coinId": "c004",
+      "amount": 2000,
+      "date": "2024-09-01T15:00:00Z",
+      "type": "sell"
+    },
+    {
+      "id": "t0099",
+      "walletId": "w007",
+      "coinId": "c001",
+      "amount": 500,
+      "date": "2024-09-01T16:00:00Z",
+      "type": "buy"
     }
   ]
 }
