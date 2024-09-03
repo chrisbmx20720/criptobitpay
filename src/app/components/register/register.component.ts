@@ -49,20 +49,83 @@ export class RegisterComponent implements OnInit {
         } else {
           // Generar un ID único
           this.user.id = this.generateUniqueId();
-          this.user.walletId = `w00${this.user.id.slice(-1)}`; // Generar walletId basado en el ID
-          this.user.accountTypeId = `a00${this.user.id.slice(-1)}`; // Generar accountTypeId basado en el ID
           
-          // Enviar el nuevo usuario al db.json (simulación de API)
-          this.http.post('http://localhost:3000/users', this.user)
-            .subscribe(
-              response => {
-                console.log('Usuario registrado exitosamente:', response);
-                alert("Usuario registrado exitosamente");
+          // Generar walletId y accountTypeId basado en el ID
+          this.user.walletId = `w00${this.user.id.slice(-1)}`; 
+          this.user.accountTypeId = `a00${this.user.id.slice(-1)}`;
+          this.user.accountNumber = this.generateAccountNumber(); // Generar accountNumber
+          
+          // Crear un nuevo wallet con valores en cero y fechas vacías
+          const newWallet = {
+            id: this.user.walletId,
+            userId: this.user.id,
+            coins: [
+              {
+                id: 'c001',
+                name: 'Bitcoin',
+                hedgeFundInvestment: 0,
+                bonificat: 0,
+                hedgeProtectionInsurance: 0,
+                optQuantity: 0,
+                strikePrice: 0,
+                expirationDate: '', // Fecha vacía
+                earnings: 0
               },
-              error => {
-                console.error('Error al registrar el usuario:', error);
+              {
+                id: 'c002',
+                name: 'Ethereum',
+                hedgeFundInvestment: 0,
+                bonificat: 0,
+                hedgeProtectionInsurance: 0,
+                optQuantity: 0,
+                strikePrice: 0,
+                expirationDate: '', // Fecha vacía
+                earnings: 0
+              },
+              {
+                id: 'c003',
+                name: 'Gold',
+                hedgeFundInvestment: 0,
+                bonificat: 0,
+                hedgeProtectionInsurance: 0,
+                optQuantity: 0,
+                strikePrice: 0,
+                expirationDate: '', // Fecha vacía
+                earnings: 0
+              },
+              {
+                id: 'c004',
+                name: 'Binance',
+                hedgeFundInvestment: 0,
+                bonificat: 0,
+                hedgeProtectionInsurance: 0,
+                optQuantity: 0,
+                strikePrice: 0,
+                expirationDate: '', // Fecha vacía
+                earnings: 0
               }
-            );
+            ]
+          };
+
+          // Enviar el nuevo wallet al db.json (simulación de API)
+          this.http.post('http://localhost:3000/wallets', newWallet).subscribe(
+            walletResponse => {
+              console.log('Wallet creado exitosamente:', walletResponse);
+              // Enviar el nuevo usuario al db.json (simulación de API)
+              this.http.post('http://localhost:3000/users', this.user).subscribe(
+                response => {
+                  console.log('Usuario registrado exitosamente:', response);
+                  alert("Usuario registrado exitosamente");
+                },
+                error => {
+                  console.error('Error al registrar el usuario:', error);
+                }
+              );
+            },
+            error => {
+              console.error('Error al crear el wallet:', error);
+            }
+          );
         }
       });
     } catch (error) {
@@ -72,5 +135,20 @@ export class RegisterComponent implements OnInit {
 
   private generateUniqueId(): string {
     return 'b00' + Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+  }
+
+  private generateAccountNumber(): string {
+    // Genera un número de cuenta con un formato específico
+    const prefix = '5645323498'; // Ejemplo de prefijo fijo
+    const suffix = Math.floor(Math.random() * 100).toString().padStart(2, '0'); // Sufijo aleatorio de 2 dígitos
+    const countryCode = 'ES'; // Código de país fijo, puede ser dinámico según tus necesidades
+
+    return `${prefix}${suffix}${countryCode}`;
+  }
+
+  public extractCountryCode(accountNumber: string): string {
+    // Extrae el código de país del número de cuenta
+    const countryCode = accountNumber.slice(-2); // Asume que el código de país está en los últimos 2 caracteres
+    return countryCode;
   }
 }

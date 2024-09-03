@@ -1,3 +1,5 @@
+<h2 class="card-title text-center mb-4 text-light">Register Users</h2>
+
 <form (ngSubmit)="onSubmit()" class="container mt-4">
   <div class="row">
     <div class="col-md-4">
@@ -17,26 +19,25 @@
     </div>
   </div>
 
-  <!-- Other form fields -->
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="form-group">
         <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="user.email" name="email" required>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="form-group">
         <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
       </div>
     </div>
-  </div>
-
-  <div class="row">
     <div class="col-md-4">
       <div class="form-group">
         <input type="text" class="form-control" id="country" placeholder="Country" [(ngModel)]="user.country" name="country" required>
       </div>
     </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-4">
       <div class="form-group">
         <input type="text" class="form-control" id="province" placeholder="Province" [(ngModel)]="user.province" name="province" required>
@@ -47,18 +48,10 @@
         <input type="text" class="form-control" id="phone" placeholder="Phone" [(ngModel)]="user.phone" name="phone" required>
       </div>
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col-md-6">
-      <div class="form-group">
-        <input type="text" class="form-control" id="accountNumber" placeholder="Account Number" [(ngModel)]="user.accountNumber" name="accountNumber" required>
-      </div>
-    </div>
-    <div class="col-md-6">
+    <div class="col-md-4">
       <div class="form-group">
         <select class="form-control" id="accountTypeId" [(ngModel)]="user.accountTypeId" name="accountTypeId" required>
-          <option selected>Select an Account Type</option>
+          <option value="" disabled selected>Select an Account Type</option>
           <option *ngFor="let type of accountTypes" [value]="type.id">{{ type.name }}</option>
         </select>
       </div>
