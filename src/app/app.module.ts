@@ -16,7 +16,8 @@ import { IndicesComponent } from './components/indices/indices.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { AuthService } from './services/auth.service';
 import { WalletService } from './services/wallet.service';
-import { HttpClientModule } from '@angular/common/http';  
+import { HttpClientModule } from '@angular/common/http';
+import { AdminWalletComponent } from './components/admin-wallet/admin-wallet.component';  
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserChartComponent,
     DashboardComponent,
     IndicesComponent,
-    WalletComponent
+    WalletComponent,
+    AdminWalletComponent
   ],
   imports: [
     BrowserModule,
