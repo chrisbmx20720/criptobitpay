@@ -8,6 +8,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { IndicesComponent } from './components/indices/indices.component'
+import { AdminWalletComponent } from './components/admin-wallet/admin-wallet.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent,
     children: [
       { path: 'user', component: UserComponent },
+      { path: 'admin/:walletId', component: AdminWalletComponent},
       { path: 'users', component: UserComponent } // Agregado para UsersComponent en Admin
     ]
   },

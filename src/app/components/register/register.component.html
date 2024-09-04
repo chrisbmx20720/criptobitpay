@@ -1,57 +1,62 @@
-<div class="container mt-5">
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-      <div class="row">
-          <!-- Primera columna -->
-          <div class="col-md-4">
-              <div class="mb-3">
-                  <label for="username" class="form-label">Username</label>
-                  <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter your username">
-              </div>
-              <div class="mb-3">
-                  <label for="lastname" class="form-label">Last Name</label>
-                  <input type="text" class="form-control" id="lastname" formControlName="lastname" placeholder="Enter your last name">
-              </div>
-              <div class="mb-3">
-                  <label for="country" class="form-label">Country</label>
-                  <input type="text" class="form-control" id="country" formControlName="country" placeholder="Enter your country">
-              </div>
-          </div>
+<h2 class="card-title text-center mb-4 text-light">Register Users</h2>
 
-          <!-- Segunda columna -->
-          <div class="col-md-4">
-              <div class="mb-3">
-                  <label for="name" class="form-label">First Name</label>
-                  <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter your first name">
-              </div>
-              <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter your email">
-              </div>
-              <div class="mb-3">
-                  <label for="province" class="form-label">Province</label>
-                  <input type="text" class="form-control" id="province" formControlName="province" placeholder="Enter your province">
-              </div>
-          </div>
+<form (ngSubmit)="onSubmit()" class="container mt-4">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="First Name" [(ngModel)]="user.name" name="name" required>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" id="lastname" placeholder="Last Name" [(ngModel)]="user.lastname" name="lastname" required>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" id="username" placeholder="Username" [(ngModel)]="user.username" name="username" required>
+      </div>
+    </div>
+  </div>
 
-          <!-- Tercera columna -->
-          <div class="col-md-4">
-              <div class="mb-3">
-                  <label for="password" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter your password">
-              </div>
-              <div class="mb-3">
-                  <label for="phone" class="form-label">Phone</label>
-                  <input type="tel" class="form-control" id="phone" formControlName="phone" placeholder="Enter your phone number">
-              </div>
-              <div class="mb-3">
-                  <label for="accountNumber" class="form-label">Account Number</label>
-                  <input type="text" class="form-control" id="accountNumber" formControlName="accountNumber" placeholder="Enter your account number">
-              </div>
-          </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" placeholder="Email" [(ngModel)]="user.email" name="email" required>
       </div>
-      
-      <div class="text-center">
-          <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="user.password" name="password" required>
       </div>
-  </form>
-</div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" id="country" placeholder="Country" [(ngModel)]="user.country" name="country" required>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" id="province" placeholder="Province" [(ngModel)]="user.province" name="province" required>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <input type="text" class="form-control" id="phone" placeholder="Phone" [(ngModel)]="user.phone" name="phone" required>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="form-group">
+        <select class="form-control" id="accountTypeId" [(ngModel)]="user.accountTypeId" name="accountTypeId" required>
+          <option value="" disabled selected>Select an Account Type</option>
+          <option *ngFor="let type of accountTypes" [value]="type.id">{{ type.name }}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary mt-3">Register</button>
+</form>

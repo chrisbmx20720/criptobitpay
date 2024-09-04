@@ -15,9 +15,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { IndicesComponent } from './components/indices/indices.component';
 import { WalletComponent } from './components/wallet/wallet.component';
 import { AuthService } from './services/auth.service';
-import { WalletService } from './services/wallet.service';
-import { HttpClientModule } from '@angular/common/http';  
+import { WalletService } from './services/wallet.service';  
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AdminWalletComponent } from './components/admin-wallet/admin-wallet.component';  
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserChartComponent,
     DashboardComponent,
     IndicesComponent,
-    WalletComponent
+    WalletComponent,
+    AdminWalletComponent
   ],
   imports: [
     BrowserModule,
