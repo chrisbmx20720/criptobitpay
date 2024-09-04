@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+/*import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EmailValidatorService } from '../../services/email-validator.service'; // Ajusta la ruta según tu estructura
 
@@ -35,6 +35,41 @@ export class RegisterComponent {
         console.log('Form Data:', form.value);
         // Aquí puedes agregar la lógica para enviar los datos del formulario
       }
+    }
+  }
+}
+*/
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+  registerForm!: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.registerForm = this.fb.group({
+      username: ['', Validators.required],
+      lastname: ['', Validators.required],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      country: ['', Validators.required],
+      province: ['', Validators.required],
+      phone: ['', Validators.required],
+      accountNumber: ['', Validators.required]
+    });
+  }
+
+  onSubmit(): void {
+    if (this.registerForm.valid) {
+      console.log(this.registerForm.value);
+      // Aquí puedes manejar el envío del formulario, como enviar los datos a un backend
     }
   }
 }

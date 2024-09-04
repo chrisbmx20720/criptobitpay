@@ -1,191 +1,57 @@
 <div class="container mt-5">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title text-center mb-4">Register</h2>
-          <form #registerForm="ngForm" (ngSubmit)="onRegister(registerForm)" class="needs-validation" novalidate>
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="username" class="form-label">Username:</label>
-                <input
-                  type="text"
-                  id="username"
-                  [(ngModel)]="username"
-                  name="username"
-                  class="form-control"
-                  placeholder="Username"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['username'].invalid && (registerForm.form.controls['username'].touched || registerForm.form.controls['username'].dirty)" class="invalid-feedback">
-                  Username is required.
-                </div>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="row">
+          <!-- Primera columna -->
+          <div class="col-md-4">
+              <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" formControlName="username" placeholder="Enter your username">
               </div>
-
-              <div class="col-md-6">
-                <label for="lastname" class="form-label">Last Name:</label>
-                <input
-                  type="text"
-                  id="lastname"
-                  [(ngModel)]="lastname"
-                  name="lastname"
-                  class="form-control"
-                  placeholder="Last Name"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['lastname'].invalid && (registerForm.form.controls['lastname'].touched || registerForm.form.controls['lastname'].dirty)" class="invalid-feedback">
-                  Last Name is required.
-                </div>
+              <div class="mb-3">
+                  <label for="lastname" class="form-label">Last Name</label>
+                  <input type="text" class="form-control" id="lastname" formControlName="lastname" placeholder="Enter your last name">
               </div>
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="name" class="form-label">First Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  [(ngModel)]="name"
-                  name="name"
-                  class="form-control"
-                  placeholder="First Name"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['name'].invalid && (registerForm.form.controls['name'].touched || registerForm.form.controls['name'].dirty)" class="invalid-feedback">
-                  First Name is required.
-                </div>
+              <div class="mb-3">
+                  <label for="country" class="form-label">Country</label>
+                  <input type="text" class="form-control" id="country" formControlName="country" placeholder="Enter your country">
               </div>
+          </div>
 
-              <div class="col-md-6">
-                <label for="email" class="form-label">Email:</label>
-                <input
-                  type="email"
-                  id="email"
-                  [(ngModel)]="email"
-                  name="email"
-                  class="form-control"
-                  placeholder="Email"
-                  required
-                />
-                <div *ngIf="emailError" class="invalid-feedback">
-                  {{ emailError }}
-                </div>
-                <div *ngIf="registerForm.form.controls['email'].invalid && (registerForm.form.controls['email'].touched || registerForm.form.controls['email'].dirty)" class="invalid-feedback">
-                  Valid email is required.
-                </div>
+          <!-- Segunda columna -->
+          <div class="col-md-4">
+              <div class="mb-3">
+                  <label for="name" class="form-label">First Name</label>
+                  <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter your first name">
               </div>
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="password" class="form-label">Password:</label>
-                <input
-                  type="password"
-                  id="password"
-                  [(ngModel)]="password"
-                  name="password"
-                  class="form-control"
-                  placeholder="Password"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['password'].invalid && (registerForm.form.controls['password'].touched || registerForm.form.controls['password'].dirty)" class="invalid-feedback">
-                  Password is required.
-                </div>
+              <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter your email">
               </div>
-
-              <div class="col-md-6">
-                <label for="country" class="form-label">Country:</label>
-                <input
-                  type="text"
-                  id="country"
-                  [(ngModel)]="country"
-                  name="country"
-                  class="form-control"
-                  placeholder="Country"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['country'].invalid && (registerForm.form.controls['country'].touched || registerForm.form.controls['country'].dirty)" class="invalid-feedback">
-                  Country is required.
-                </div>
+              <div class="mb-3">
+                  <label for="province" class="form-label">Province</label>
+                  <input type="text" class="form-control" id="province" formControlName="province" placeholder="Enter your province">
               </div>
-            </div>
+          </div>
 
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="province" class="form-label">Province/State:</label>
-                <input
-                  type="text"
-                  id="province"
-                  [(ngModel)]="province"
-                  name="province"
-                  class="form-control"
-                  placeholder="Province/State"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['province'].invalid && (registerForm.form.controls['province'].touched || registerForm.form.controls['province'].dirty)" class="invalid-feedback">
-                  Province/State is required.
-                </div>
+          <!-- Tercera columna -->
+          <div class="col-md-4">
+              <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter your password">
               </div>
-
-              <div class="col-md-6">
-                <label for="phone" class="form-label">Phone Number:</label>
-                <input
-                  type="text"
-                  id="phone"
-                  [(ngModel)]="phone"
-                  name="phone"
-                  class="form-control"
-                  placeholder="Phone Number"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['phone'].invalid && (registerForm.form.controls['phone'].touched || registerForm.form.controls['phone'].dirty)" class="invalid-feedback">
-                  Phone Number is required.
-                </div>
+              <div class="mb-3">
+                  <label for="phone" class="form-label">Phone</label>
+                  <input type="tel" class="form-control" id="phone" formControlName="phone" placeholder="Enter your phone number">
               </div>
-            </div>
-
-            <div class="row mb-3">
-              <div class="col-md-6">
-                <label for="accountTypeId" class="form-label">Account Type ID:</label>
-                <input
-                  type="text"
-                  id="accountTypeId"
-                  [(ngModel)]="accountTypeId"
-                  name="accountTypeId"
-                  class="form-control"
-                  placeholder="Account Type ID"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['accountTypeId'].invalid && (registerForm.form.controls['accountTypeId'].touched || registerForm.form.controls['accountTypeId'].dirty)" class="invalid-feedback">
-                  Account Type ID is required.
-                </div>
+              <div class="mb-3">
+                  <label for="accountNumber" class="form-label">Account Number</label>
+                  <input type="text" class="form-control" id="accountNumber" formControlName="accountNumber" placeholder="Enter your account number">
               </div>
-
-              <div class="col-md-6">
-                <label for="accountNumber" class="form-label">Account Number:</label>
-                <input
-                  type="text"
-                  id="accountNumber"
-                  [(ngModel)]="accountNumber"
-                  name="accountNumber"
-                  class="form-control"
-                  placeholder="Account Number"
-                  required
-                />
-                <div *ngIf="registerForm.form.controls['accountNumber'].invalid && (registerForm.form.controls['accountNumber'].touched || registerForm.form.controls['accountNumber'].dirty)" class="invalid-feedback">
-                  Account Number is required.
-                </div>
-              </div>
-            </div>
-
-            <button type="submit" class="btn btn-dark w-100" [disabled]="registerForm.invalid">Register</button>
-
-            <div class="mt-4 text-center">
-              Already have an account? <a routerLink="/login">Login</a>
-            </div>
-          </form>
-        </div>
+          </div>
       </div>
-    </div>
-  </div>
+      
+      <div class="text-center">
+          <button type="submit" class="btn btn-primary">Register</button>
+      </div>
+  </form>
 </div>

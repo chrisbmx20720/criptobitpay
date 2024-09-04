@@ -17,6 +17,7 @@ import { WalletComponent } from './components/wallet/wallet.component';
 import { AuthService } from './services/auth.service';
 import { WalletService } from './services/wallet.service';
 import { HttpClientModule } from '@angular/common/http';  
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [AuthService,WalletService],
   bootstrap: [AppComponent]
