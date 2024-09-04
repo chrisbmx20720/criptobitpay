@@ -133,6 +133,20 @@
       "phone": "78524169",
       "accountTypeId": "a005",
       "accountNumber": "564532349861ES"
+    },
+    {
+      "id": "b00602",
+      "username": "manuv",
+      "lastname": "Vargas",
+      "name": "Manuel",
+      "email": "manu@gmail.com",
+      "password": "010101",
+      "walletId": "w002",
+      "country": "USA",
+      "province": "DAKOTA",
+      "phone": "+1789456",
+      "accountTypeId": "a002",
+      "accountNumber": "564532349898ES"
     }
   ],
   "wallets": [
@@ -439,6 +453,56 @@
     {
       "id": "w005",
       "userId": "b00895",
+      "coins": [
+        {
+          "id": "c001",
+          "name": "Bitcoin",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c002",
+          "name": "Ethereum",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c003",
+          "name": "Gold",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        },
+        {
+          "id": "c004",
+          "name": "Binance",
+          "hedgeFundInvestment": 0,
+          "bonificat": 0,
+          "hedgeProtectionInsurance": 0,
+          "optQuantity": 0,
+          "strikePrice": 0,
+          "expirationDate": "",
+          "earnings": 0
+        }
+      ]
+    },
+    {
+      "id": "w002",
+      "userId": "b00602",
       "coins": [
         {
           "id": "c001",
