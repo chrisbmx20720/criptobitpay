@@ -190,7 +190,7 @@
         {
           "id": "c004",
           "name": "Binance",
-          "hedgeFundInvestment": "0",
+          "hedgeFundInvestment": "25000",
           "bonificat": "0",
           "hedgeProtectionInsurance": "0",
           "optQuantity": "0",

@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent,
     children: [
       { path: 'user', component: UserComponent },
-      { path: 'users', component: UserComponent } // Ruta para lista de usuarios en Admin
+      { path: 'users', component: UserComponent },
+      { path: '', redirectTo: 'user', pathMatch: 'full' }
     ]
   },
   { path: 'user', component: UserComponent },
