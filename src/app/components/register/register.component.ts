@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/*import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AccountTypeService } from '../../services/account-type.service';
 
@@ -150,5 +150,40 @@ export class RegisterComponent implements OnInit {
     // Extrae el código de país del número de cuenta
     const countryCode = accountNumber.slice(-2); // Asume que el código de país está en los últimos 2 caracteres
     return countryCode;
+  }
+}
+*/
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+@Component({
+  selector: 'app-register',
+  templateUrl: './register.component.html',
+  styleUrls: ['./register.component.css']
+})
+export class RegisterComponent implements OnInit {
+  registerForm!: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.registerForm = this.fb.group({
+      username: ['', Validators.required],
+      lastname: ['', Validators.required],
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      country: ['', Validators.required],
+      province: ['', Validators.required],
+      phone: ['', Validators.required],
+      accountNumber: ['', Validators.required]
+    });
+  }
+
+  onSubmit(): void {
+    if (this.registerForm.valid) {
+      console.log(this.registerForm.value);
+      // Aquí puedes manejar el envío del formulario, como enviar los datos a un backend
+    }
   }
 }
