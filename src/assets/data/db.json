@@ -157,46 +157,46 @@
         {
           "id": "c001",
           "name": "Bitcoin",
-          "hedgeFundInvestment": 100000,
-          "bonificat": 5000,
-          "hedgeProtectionInsurance": 2000,
-          "optQuantity": 10,
-          "strikePrice": 25000,
-          "expirationDate": "2024-12-31T00:00:00Z",
-          "earnings": 30000
+          "hedgeFundInvestment": "5000",
+          "bonificat": "26000",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-09-19",
+          "earnings": "0"
         },
         {
           "id": "c002",
           "name": "Ethereum",
-          "hedgeFundInvestment": 50000,
-          "bonificat": 2500,
-          "hedgeProtectionInsurance": 1000,
-          "optQuantity": 20,
-          "strikePrice": 1500,
-          "expirationDate": "2024-11-30T00:00:00Z",
-          "earnings": 15000
+          "hedgeFundInvestment": "25000",
+          "bonificat": "0",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-09-17",
+          "earnings": "0"
         },
         {
           "id": "c003",
           "name": "Gold",
-          "hedgeFundInvestment": 30000,
-          "bonificat": 1500,
-          "hedgeProtectionInsurance": 800,
-          "optQuantity": 15,
-          "strikePrice": 1800,
-          "expirationDate": "2024-10-31T00:00:00Z",
-          "earnings": 10000
+          "hedgeFundInvestment": "13000",
+          "bonificat": "0",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-10-25",
+          "earnings": "0"
         },
         {
           "id": "c004",
           "name": "Binance",
-          "hedgeFundInvestment": 20000,
-          "bonificat": 1000,
-          "hedgeProtectionInsurance": 500,
-          "optQuantity": 30,
-          "strikePrice": 400,
-          "expirationDate": "2024-09-30T00:00:00Z",
-          "earnings": 8000
+          "hedgeFundInvestment": "0",
+          "bonificat": "0",
+          "hedgeProtectionInsurance": "0",
+          "optQuantity": "0",
+          "strikePrice": "0",
+          "expirationDate": "2024-09-26",
+          "earnings": "0"
         }
       ]
     },

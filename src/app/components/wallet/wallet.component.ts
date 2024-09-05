@@ -1,4 +1,3 @@
-
 import { Component, OnInit } from '@angular/core';
 import { Wallet, Coin } from '../../models/wallet.model';
 import { WalletService } from '../../services/wallet.service';
@@ -19,12 +18,10 @@ export class WalletComponent implements OnInit {
   expirationDate: string = '';
   earnings: number = 0;
   currentUser: any;
-  username : any;
-  accountNumber:any;
-  userLocation:any;
-  userId:any;
-
-  
+  username: any;
+  accountNumber: any;
+  userLocation: any;
+  userId: any;
 
   constructor(private walletService: WalletService) {}
 
@@ -37,21 +34,19 @@ export class WalletComponent implements OnInit {
       console.log('Usuario actual:', this.currentUser);
 
       // Destructuring para obtener walletId y name
-      const { walletId, name,lastname,country,province, accountTypeId,accountNumber,id } = this.currentUser;
+      const { walletId, name, lastname, country, province, accountNumber, id } = this.currentUser;
       console.log('Wallet ID:', walletId);
       console.log('Nombre:', name);
 
-      this.username = `${name}  ${lastname}`;
-      this.accountNumber = accountNumber
-      this.userLocation = `${province} , ${country}`;
+      this.username = `${name} ${lastname}`;
+      this.accountNumber = accountNumber;
+      this.userLocation = `${province}, ${country}`;
       this.userId = id;
-    
 
       this.walletService.getWallet(walletId).subscribe(wallet => {
         this.wallet = wallet;
         this.setView(this.currentView);
       });
-
     } else {
       console.log('No hay usuario en localStorage');
     }
@@ -59,10 +54,10 @@ export class WalletComponent implements OnInit {
 
   setView(view: string): void {
     const selectedCoin = this.wallet.coins.find(c => c.name.toLowerCase() === view.toLowerCase());
-    
+
     if (selectedCoin) {
       this.currentView = view;
-      this.hedgeFundInvestment = 0;
+      this.hedgeFundInvestment = selectedCoin.hedgeFundInvestment;
       this.bonificat = selectedCoin.bonificat;
       this.hedgeProtectionInsurance = selectedCoin.hedgeProtectionInsurance;
       this.optQuantity = selectedCoin.optQuantity;
@@ -71,5 +66,33 @@ export class WalletComponent implements OnInit {
       this.earnings = selectedCoin.earnings;
     }
   }
-}
 
+  updateWallet(): void {
+    // Encuentra el índice del coin que se está editando
+    const coinIndex = this.wallet.coins.findIndex(c => c.name.toLowerCase() === this.currentView.toLowerCase());
+
+    if (coinIndex !== -1) {
+      // Actualiza el coin correspondiente
+      this.wallet.coins[coinIndex] = {
+        ...this.wallet.coins[coinIndex],
+        hedgeFundInvestment: this.hedgeFundInvestment,
+        bonificat: this.bonificat,
+        hedgeProtectionInsurance: this.hedgeProtectionInsurance,
+        optQuantity: this.optQuantity,
+        strikePrice: this.strikePrice,
+        expirationDate: this.expirationDate,
+        earnings: this.earnings
+      };
+
+      // Llama al servicio para actualizar la billetera en el backend
+      this.walletService.updateWallet(this.wallet.id, this.wallet).subscribe({
+        next: (response) => {
+          console.log('Billetera actualizada exitosamente:', response);
+        },
+        error: (err) => {
+          console.error('Error al actualizar la billetera:', err);
+        }
+      });
+    }
+  }
+}
