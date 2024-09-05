@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  height: 100vh; /* Utiliza toda la altura de la ventana para centrar verticalmente */
+  height: 100vh;
   padding: 20px;
 }
 
@@ -29,6 +29,10 @@ body {
   background-color: #fff; /* Fondo blanco para el formulario */
 }
 
+
+.btn-dark{
+  background-color: #03012f;
+}
 .card-body {
   padding: 1.5rem; /* Aumenta el relleno para mayor comodidad */
 }
@@ -47,20 +51,15 @@ body {
 .btn-dark {
   font-size: 1.1rem; /* Tamaño de fuente más grande en el botón */
   padding: 0.75rem; /* Relleno adicional en el botón */
-  background-color: #5c60f5; /* Color de fondo del botón */
   border: none; /* Sin borde */
   border-radius: 5px; /* Bordes redondeados en el botón */
 }
-
-.btn-dark:hover {
-  background-color: #4a4bfc; /* Color más oscuro al pasar el ratón */
-}
-
+/*
 .sign-up {
-  font-size: 1rem; /* Tamaño de fuente del enlace de registro */
-  color: #007bff; /* Color del texto del enlace */
+  font-size: 1rem; 
+  color: #007bff; 
 }
-
+*/
 .sign-up a {
   text-decoration: none; /* Sin subrayado */
 }

@@ -20,7 +20,6 @@ export class UserComponent implements OnInit {
   }
 
   viewWallet(walletId: string): void {
-  //alert(`ID de la billetera: ${walletId}`);
    this.router.navigate(['/adminwallet', walletId]);
   }
 }
